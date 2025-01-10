@@ -1,0 +1,644 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedCrossKTR - Blood Donation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color:rgb(245, 238, 238);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #E63946;
+            padding: 15px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90vh; /* Set the height to 150% of the viewport height */
+          background-image: url("/static/image/hero-background.jpg"); /* Use url() to reference the image */
+          background-size: cover; /* Ensures the image covers the full area */
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat; /* Prevent the image from repeating */
+          color: white;
+          text-align: center;
+          position: relative;
+          box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero .content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #E63946;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #d62828;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 60px 40px;
+            background-color:rgb(255, 255, 255);
+        }
+
+        .about .text {
+            max-width: 600px;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1D3557;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .about .cta-button {
+            background-color: #1D3557;
+            padding: 14px 36px;
+            text-transform: uppercase;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Statistics Section */
+        .statistics {
+            background-color:rgb(245, 238, 238);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .statistics h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1D3557;
+            margin-bottom: 40px;
+        }
+
+        .statistics .stat {
+            display: inline-block;
+            width: 30%;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px;
+            color: #E63946;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            padding: 80px 40px;
+            background-color: #1D3557;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-section .cta-button {
+            background-color: #E63946;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1D3557;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include "blood/navbar.html" %}
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content">
+        
+        </div>
+    </section>
+
+    
+  
+<!-- About Section -->
+<section class="about">
+    <div class="text-container">
+        <div class="text">
+            <h2>Why Blood Donation Matters</h2>
+            <div class="rotating-text-wrapper">
+                <p class="rotating-text active">Every year, millions of people rely on blood donations for critical surgeries, treatments, and emergencies.</p>
+                <p class="rotating-text">By donating blood, you contribute directly to saving lives.</p>
+                <p class="rotating-text">Your donation could be the one that makes a difference in someone's life.</p>
+                <p class="rotating-text">Blood donations are essential for patients undergoing cancer treatments and organ transplants.</p>
+                <p class="rotating-text">Regular blood donors play a vital role in maintaining a stable supply for hospitals.</p>
+                <p class="rotating-text">The need for blood is constant, and every donation counts.</p>
+                <p class="rotating-text">One pint of blood can save up to three lives. Be the hero someone needs today.</p>
+            </div>
+            <a href="#cta" class="cta-button">Learn More</a>
+        </div>
+    </div>
+    
+    <style>
+        .text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+    
+        .text {
+            text-align: center;
+            max-width: 600px;
+        }
+    
+        .text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    
+        .rotating-text-wrapper {
+            position: relative;
+            height: 80px; /* Ensures consistent height for the text area */
+        }
+    
+        .rotating-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    
+        .rotating-text.active {
+            opacity: 1;
+        }
+    
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #e63946;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .cta-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const texts = document.querySelectorAll('.rotating-text');
+            let currentIndex = 0;
+    
+            const showNextText = () => {
+                texts[currentIndex].classList.remove('active'); // Hide current text
+                currentIndex = (currentIndex + 1) % texts.length; // Move to next index
+                texts[currentIndex].classList.add('active'); // Show next text
+            };
+    
+            setInterval(showNextText, 4000); // Change text every 4 seconds
+        });
+    </script>
+    
+
+  <div class="image-slider">
+      <div class="slider-images">
+          <img src="{% static 'image/donation1.jpg' %}" alt="Blood Donation 1" class="slider-image">
+          <img src="{% static 'image/donation2.jpg' %}" alt="Blood Donation 2" class="slider-image">
+          <img src="{% static 'image/donation3.jpg' %}" alt="Blood Donation 3" class="slider-image">
+          <img src="{% static 'image/donation4.jpg' %}" alt="Blood Donation 4" class="slider-image">
+          <img src="{% static 'image/donation5.jpg' %}" alt="Blood Donation 5" class="slider-image">
+          <img src="{% static 'image/donation6.jpg' %}" alt="Blood Donation 6" class="slider-image">
+      </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  
+  .about {
+      position: relative;
+      text-align: center;
+  }
+
+  .image-slider {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden; /* Hide the images that are not in view */
+  }
+
+  .slider-images {
+      display: flex;
+      transition: transform 1s ease-in-out; /* Sliding effect */
+  }
+
+  .slider-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      flex-shrink: 0; /* Prevent shrinking */
+  }
+</style>
+
+<!-- Script -->
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.slider-image');
+  const slider = document.querySelector('.slider-images');
+
+  function showNextImage() {
+      // Move to the next image
+      currentIndex = (currentIndex + 1) % images.length;
+
+      // Slide images horizontally by changing the transform property
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  // Change images every 3 seconds
+  setInterval(showNextImage, 3000);
+</script>
+
+<section class="section-1">
+  <div class="container">
+      <h2>Section Title</h2>
+      <p>This is a paragraph with white text on a white background.</p>
+  </div>
+</section>
+
+<!-- Add styles -->
+<style>
+  .section-1 {
+      background-color: white; /* White background */
+      padding: 50px 20px;
+      text-align: center;
+  }
+
+  .section-1 h2,
+  .section-1 p {
+      color: white; /* White text */
+  }
+</style>
+
+</style>
+
+ <!-- Statistics Section -->
+<section class="statistics">
+  <h2>Impact of Your Donation</h2>
+  
+  <style>
+    .stats-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .stat {
+        text-align: center;
+        flex: 1;
+    }
+
+    .stat-value {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .stat:nth-child(1) .stat-value {
+        color: #e63946;
+    }
+
+    .stat:nth-child(2) .stat-value {
+        color: #457b9d;
+    }
+
+    .stat:nth-child(3) .stat-value {
+        color: #2a9d8f;
+    }
+</style>
+</head>
+<body>
+<div class="stats-container">
+    <div class="stat">
+        <p class="stat-value" data-target="3">0</p>
+        <p class="stat-description">1 Donation = 3 Lives Saved</p>
+    </div>
+    <div class="stat">
+        <p class="stat-value" data-target="1000">0</p>
+        <p class="stat-description">Over 1,000 Donations Every Month</p>
+    </div>
+    <div class="stat">
+        <p class="stat-value" data-target="10000">0</p>
+        <p class="stat-description">10,000+ Lives Saved Annually</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.stat-value');
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const increment = target / 200; // Adjust speed
+            
+            let value = 0;
+            const updateCounter = () => {
+                value += increment;
+                if (value >= target) {
+                    counter.textContent = target.toLocaleString();
+                } else {
+                    counter.textContent = Math.ceil(value).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+            updateCounter();
+        });
+    });
+</script>
+
+  <!-- Additional Facts -->
+  <div class="additional-facts">
+      <div class="fact">
+          <p><strong>Did you know?</strong> Blood donations are crucial for patients undergoing major surgeries, trauma victims, and people battling chronic diseases like cancer and hemophilia.</p>
+      </div>
+
+      <div class="fact">
+          <p><strong>Why You Should Donate:</strong> Donating blood is a quick, simple, and safe process that takes less than 30 minutes. And it doesn’t only help save lives — it also helps you stay healthy by stimulating the production of new blood cells in your body.</p>
+      </div>
+
+      <div class="fact">
+          <p><strong>Did you know?</strong> Every 2 seconds, someone in the world needs blood. Your donation helps maintain a steady supply for emergency situations and medical treatments.</p>
+      </div>
+
+      <div class="fact">
+          <p><strong>Did you know?</strong> Blood banks face a continuous challenge to keep up with demand. Regular donations are critical to ensuring the availability of blood for hospitals and clinics across the world.</p>
+      </div>
+
+      <div class="fact">
+          <p><strong>The Power of Platelets:</strong> While red blood cells are essential for oxygen transport, platelets in donated blood help in clotting and are vital for patients undergoing chemotherapy or surgeries.</p>
+      </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  .statistics {
+      background-color:rgb(238, 238, 238);
+      padding: 60px 20px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+  }
+
+  .statistics h2 {
+      font-size: 2.5em;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .stats-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+  }
+
+  .stat {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .stat:hover {
+      transform: translateY(-10px);
+  }
+
+  .stat-value {
+      font-size: 1.4em;
+      color: #e60000;
+      font-weight: bold;
+      margin: 0;
+  }
+
+  .additional-facts .fact {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin: 15px auto;
+      width: 80%;
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.5;
+  }
+
+  .additional-facts .fact p {
+      margin: 0;
+  }
+
+  .additional-facts .fact strong {
+      color: #e60000;
+      font-weight: bold;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+      .stats-container {
+          flex-direction: column;
+      }
+
+      .stat {
+          width: 80%;
+          margin: 15px auto;
+      }
+
+      .additional-facts .fact {
+          width: 90%;
+      }
+  }
+</style>
+
+
+
+    <!-- Call to Action Section -->
+<section class="cta-section" id="cta">
+    <h2>Ready to Make a Difference?</h2>
+    <p>Join thousands of generous donors and contribute to the RedCrossKTR community. Every donation counts, and your blood donation could save lives today.</p>
+    <a href="/donor/donorlogin" class="cta-button">
+        <i class="fas fa-user"></i>&nbsp; Donate Now!
+    </a>
+</section>
+
+<!-- Styles -->
+<style>
+    .cta-section {
+        background-color:rgb(0, 0, 0);  /* Red background for high visibility */
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 60px;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .cta-section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        background-color: #333;
+        color: white;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button i {
+        margin-right: 10px;
+    }
+
+    .cta-button:hover {
+        background-color: #444;
+        transform: translateY(-5px);
+    }
+
+    .cta-button:focus {
+        outline: none;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .cta-section h2 {
+            font-size: 2em;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            font-size: 1em;
+            padding: 12px 25px;
+        }
+    }
+</style>
+
+
+    {% include "blood/footer.html" %}
+</body>
+
+</html>
