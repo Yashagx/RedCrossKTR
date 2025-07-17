@@ -1,6 +1,8 @@
 
 # RedCrossKTR – Blood Bank Management System 🚑💻
 
+**Live Demo:** [WEBAPP](https://yashagx.pythonanywhere.com/)
+
 ## 📝 Project Overview
 
 **RedCrossKTR** is a **full-stack web application** developed for **SRM Global Hospitals** to digitize and streamline the **blood donation lifecycle**, **inventory management**, and **request workflows**. It addresses existing challenges caused by **manual data entry**, **lack of data traceability**, **communication gaps**, and **inefficient approval pipelines**.
